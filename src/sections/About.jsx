@@ -114,7 +114,7 @@ function About() {
 									</div>
 								</div>
 								{/* Colonne droite */}
-								<div ref={imageRef} className="w-full bg-black rounded-sm"></div>
+								<div ref={imageRef} className="hidden md:block w-full bg-black rounded-sm"></div>
 							</div>
             </div>
           </div>
