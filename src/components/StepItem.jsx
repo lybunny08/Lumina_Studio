@@ -33,7 +33,7 @@ export default function StepItem({ title, desc, index, color }) {
         <span className="px-[11px] py-[6px] bg-black text-white rounded-md flex-shrink-0">
           {String(index + 1).padStart(2, "0")}
         </span>
-        <h3 className="text-[22px] leading-[22px] neue-medium">{title}</h3>
+        <h3 className="text-[22px] leading-[24px] neue-medium">{title}</h3>
       </div>
 
       {/* Version desktop : Titre à gauche, numéro à droite */}
