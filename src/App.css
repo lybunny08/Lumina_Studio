@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Neue Bold";
+  src: url("../src/assets/fonts/NeueMontreal-Bold.woff2");
+}
+
+.neue-bold{
+    font-family: "Neue Bold";
+}
+
+@font-face {
+  font-family: "Neue Regular";
+  src: url("../src/assets/fonts/NeueMontreal-Regular.woff2");
+}
+
+.neue-regular{
+  font-family: "Neue Regular";
+}
+
+@font-face {
+  font-family: "Neue Medium";
+  src: url("../src/assets/fonts/NeueMontreal-Medium.woff2");
+}
+
+.neue-medium{
+  font-family: "Neue Medium";
+}
+
+@font-face {
+  font-family: "PP Editorial";
+  src: url("../src/assets/fonts/PPEditorialOld-Regular.woff");
+}
+
+.pp-editorial{
+  font-family: "PP Editorial";
+}
