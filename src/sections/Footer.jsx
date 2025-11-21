@@ -1,22 +1,31 @@
 import Copy from '../components/Copy';
 import GradientBackground from '../components/GradientBackground';
-import ErrorBoundary from '../components/ErrorBoundary';
+import lumina from '../assets/lumina studio.svg'
+import luminalg from '../assets/lumina studiolg.svg'
 
 function Footer() {
   return (
     <div className="relative h-screen w-full flex flex-col py-[16px] justify-between ">
-      <div className="absolute -mx-[30px] inset-0 -z-10 opacity-15">
-        <ErrorBoundary>
-          {/* <GradientBackground /> */}
-        </ErrorBoundary>
+      {/* Gradient background en position absolue derrière */}
+      {/* <div className="absolute inset-0 -z-10 opacity-15">
+        <GradientBackground />
+      </div> */}
+      <div className="absolute -mx-[30px] inset-0 -z-10 opacity-40">
+        {/* <GradientBackground /> */}
+        {/* Overlay de fondu en haut avec Tailwind */}
         <div className="absolute top-0 left-0 w-full h-1/5 bg-gradient-to-b from-white to-transparent pointer-events-none" />
       </div>
 
       {/* Contenu au-dessus */}
       <div className="flex flex-col gap-[32px] ">
-        <p className="hidden md:block uppercase text-[153.6px] leading-[153.6px] neue-bold ">lumina Studio</p>
-        <p className="md:hidden text-center uppercase text-[85px] leading-[85px] neue-bold ">lumina Studio</p>
+        <img src={luminalg} alt="" className='w-screen h-full hidden md:block' />
+        <img src={lumina} alt="" className='w-screen h-full md:hidden' />
+        {/* <p className="hidden md:block uppercase text-[153.6px] leading-[153.6px] neue-bold ">lumina Studio</p> */}
+        {/* <p className="md:hidden text-center uppercase text-[85px] leading-[85px] neue-bold ">lumina Studio</p> */}
         <div className="flex flex-row justify-between leading-[14px] text-[14px] ">
+          <Copy>
+            <p>Home</p>
+          </Copy>
           <Copy>
             <p>About</p>
           </Copy>
