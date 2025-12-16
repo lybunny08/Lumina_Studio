@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import Copy from "../components/Copy";
+import TextAnimation from "../components/TextAnimation;";
 import ReusableText from "../components/Common/ReusableText";
 
 const COLORS = ["#ff595e","#93b748" ,"#ffca3a", "#8ac926","#2f27ce" , "#1982c4", "#6a4c93" ];
@@ -47,11 +47,11 @@ function Intro() {
       className="h-screen w-full md:pb-[200px] md:px-[200px] flex flex-col gap-[16px] items-center justify-center relative"
     >
       <ReusableText>You've made it so far — maybe it's not by chance.</ReusableText>
-      <Copy>
+      <TextAnimation>
         <p className="z-20 text-center text-[24px] md:text-[32px] neue-medium">
           If your idea lives in the shadow, we're to shape it into something clear, powerful, and timeless. Let's begin a conversation that turns silence into lights.
         </p>
-      </Copy>
+      </TextAnimation>
 
       {/* Colored trail */}
       {COLORS.map((color, i) => (

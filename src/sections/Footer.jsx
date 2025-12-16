@@ -1,4 +1,4 @@
-import Copy from '../components/Copy';
+import TextAnimation from '../components/TextAnimation;';
 import GradientBackground from '../components/GradientBackground';
 import lumina from '../assets/lumina studio.svg'
 import luminalg from '../assets/lumina studiolg.svg'
@@ -6,10 +6,6 @@ import luminalg from '../assets/lumina studiolg.svg'
 function Footer() {
   return (
     <div className="relative h-screen w-full flex flex-col py-[16px] justify-between ">
-      {/* Gradient background en position absolue derrière */}
-      {/* <div className="absolute inset-0 -z-10 opacity-15">
-        <GradientBackground />
-      </div> */}
       <div className="absolute -mx-[30px] inset-0 -z-10 opacity-40">
         {/* <GradientBackground /> */}
         {/* Overlay de fondu en haut avec Tailwind */}
@@ -23,21 +19,21 @@ function Footer() {
         {/* <p className="hidden md:block uppercase text-[153.6px] leading-[153.6px] neue-bold ">lumina Studio</p> */}
         {/* <p className="md:hidden text-center uppercase text-[85px] leading-[85px] neue-bold ">lumina Studio</p> */}
         <div className="flex flex-row justify-between leading-[14px] text-[14px] ">
-          <Copy>
+          <TextAnimation>
             <p>Home</p>
-          </Copy>
-          <Copy>
+          </TextAnimation>
+          <TextAnimation>
             <p>About</p>
-          </Copy>
-          <Copy>
+          </TextAnimation>
+          <TextAnimation>
             <p>Services</p>
-          </Copy>
-          <Copy>
+          </TextAnimation>
+          <TextAnimation>
             <p>Works</p>
-          </Copy>
-          <Copy>
+          </TextAnimation>
+          <TextAnimation>
             <p>Contact</p>
-          </Copy>
+          </TextAnimation>
         </div>
       </div>
       <div className="flex flex-col gap-[16px] text-[14px] ">

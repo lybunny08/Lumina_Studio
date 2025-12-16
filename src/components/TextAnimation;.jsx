@@ -5,7 +5,7 @@ import { SplitText } from 'gsap/SplitText';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-function Copy({ 
+function TextAnimation({ 
   children, 
   animationOnScroll = true, 
   delay = 0,
@@ -29,7 +29,7 @@ function Copy({
     }
 
     const runAnimation = () => {
-      const elements = containerRef.current.hasAttribute('data-copy-wrapper') 
+      const elements = containerRef.current.hasAttribute('data-TextAnimation-wrapper') 
         ? Array.from(containerRef.current.children) 
         : [containerRef.current];
 
@@ -108,10 +108,10 @@ function Copy({
   }
 
   return (
-    <div ref={containerRef} data-copy-wrapper="true">
+    <div ref={containerRef} data-TextAnimation-wrapper="true">
       {children}
     </div>
   );
 }
 
-export default Copy;
+export default TextAnimation;

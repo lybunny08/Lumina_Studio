@@ -1,4 +1,4 @@
-import Copy from "../components/Copy";
+import TextAnimation from "../components/TextAnimation;";
 import ServiceItem from "../components/ServiceItem";
 import ReusableText from "../components/Common/ReusableText";
 
@@ -37,11 +37,11 @@ function Services() {
 
         {/* Colonne droite */}
         <div className="md:col-span-9 ">
-          <Copy disableOnMobile={true}>
+          <TextAnimation disableOnMobile={true}>
             <h2 className="text-[24px] leading-[32px] md:text-[32px] md:leading-[40px] neue-medium">
               Shaped by every brief, built for clarity and impact. We merge design, development, and brand thinking to align vision with execution — with silence, precision, and intent.
             </h2>
-          </Copy>
+          </TextAnimation>
         </div>
       </div>
 

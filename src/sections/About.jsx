@@ -1,5 +1,5 @@
 import { useRef, useEffect } from "react";
-import Copy from "../components/Copy";
+import TextAnimation from "../components/TextAnimation;";
 import ReusableText from "../components/Common/ReusableText";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -83,12 +83,12 @@ function About() {
         </div>
         {/* Colonne droite */}
         <div className="col-span-9 flex flex-col gap-[32px] md:gap-[66px]">
-          <Copy disableOnMobile={true}>
+          <TextAnimation disableOnMobile={true}>
 						<h2 className="text-[24px] leading-[32px] md:text-[32px] md:leading-[40px] neue-medium">
 							We help creative agencies stand out online. We listen to their vision,
 							and build exactly what they imagine — with care, precision, and meaning.
 						</h2>
-					</Copy>
+					</TextAnimation>
           {/* Grille interne pour positionner le bloc à droite */}
           <div className="grid md:grid-cols-9">
             <div className="col-start-4 col-span-6">

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-import vertexShader from "../shaders/plane.vert";
-import fragmentShader from "../shaders/gradient.frag";
+import vertexShader from "../shaders/plane.vert?raw";
+import fragmentShader from "../shaders/gradient.frag?raw";
 import { CursorTexture } from "./CursorTexture";
 
 export default function GradientBackground() {
