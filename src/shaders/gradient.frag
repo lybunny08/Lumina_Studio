@@ -4,6 +4,8 @@ uniform float uZoom;
 uniform float uGrainAmount;
 uniform float uGrainSpeed;
 
+uniform float uDebug; // debug toggle (0 = off, 1 = on)
+
 uniform vec2 uMeshSize;
 uniform vec2 uImageSize;
 uniform vec2 uResolution;
@@ -68,7 +70,7 @@ float gradientShaderFbm(vec2 pos, float time, float speed) {
     float a = sin(time*speed);
     float b = cos(time*speed);
     mat2 m = mat2(-0.80, 0.36, -0.60, -0.48);
-    float total;
+    float total = 0.0;
     total += 0.2500*snoise(pos) * b;
 
     return total;
@@ -134,10 +136,15 @@ void main() {
     gradientShaderUv2.xy += uTime * .05;
     gradientShaderUv2 = rotateUV(gradientShaderUv2, uTime * .05);
 
-    vec4 gradientShader2 = gradientShader(gradientShaderUv2, uTime, 0.0, 1.);
+    vec4 gradientShader2 = gradientShader(gradientShaderUv2, uTime, uSpeed, 1.);
     gradientShader2 /= .25;
 
-    gradientUV = rotateUV(gradientUV, uTime * uSpeed);
+    // Stronger time-based UV shift to make motion visible
+    gradientUV = rotateUV(gradientUV, uTime * uSpeed * 0.6);
+
+    // Add a noticeable traveling offset
+    gradientUV += vec2(sin(uTime * uSpeed * 0.35), cos(uTime * uSpeed * 0.2)) * 0.25;
+
     gradientUV.xy -= .5;
     gradientUV.y *= uResolution.y / uResolution.x;
     gradientUV.xy += .5;
@@ -145,13 +152,21 @@ void main() {
     gradientUV.y *= gradientShader2.r * 4.;
     gradientUV.xy += .5;
 
-    vec4 gradientTexture = texture(uGradient, gradientUV);
+    vec4 gradientTexture = texture2D(uGradient, gradientUV);
 
     vec2 grainedUv = uv + snoise(uv * 400.0);
     float grainSpeed = uGrainSpeed;
     float grain = snoise(grainedUv + uTime * random(grainedUv) * grainSpeed);
     vec3 bg = vec3(grain) * uGrainAmount;
 
-    //gl_FragColor = vec4(mouseTex.rgb + bg, 1.);
-    gl_FragColor = vec4(gradientTexture.rgb + bg, 1.);
+    // Visible color modulation based on time to confirm animation
+    float modAmp = 0.35;
+    float colorMod = sin(uTime * uSpeed * 1.8) * modAmp;
+    vec3 colorShift = vec3(0.6, 0.15, 0.5) * colorMod;
+
+    // Debug overlay: a visible red oscillation when uDebug == 1.0
+    float t = sin(uTime * 2.0) * 0.5 + 0.5;
+    vec3 debugColor = vec3(t, 0.0, 0.0);
+
+    gl_FragColor = vec4(gradientTexture.rgb + bg + colorShift + debugColor * uDebug, 1.);
 }
