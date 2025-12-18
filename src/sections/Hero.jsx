@@ -1,9 +1,9 @@
-import SplineScene from "../components/Spline";
+import SplineScene from "../components/SplineScene";
 
 function Hero() {
   return (
     <div className="-mx-[10px] md:-mx-[20px] my-[8px]">
-      <div className="relative min-h-[97vh] text-white rounded-md w-full flex items-end pb-[32px] px-[20px]">
+      <div className="relative min-h-[97vh] text-white rounded-md w-full flex items-end pb-[32px] px-[20px] overflow-hidden">
         {/* Spline background */}
         <div className="absolute inset-0 overflow-hidden rounded-md">
           {typeof window !== "undefined" && (
@@ -12,19 +12,8 @@ function Hero() {
             />
           )}
           
-          {/* Overlay jaune en bas - différentes options */}
-
-          {/* Option 1: Dégradé jaune subtil */}
+          {/* Overlay jaune en bas */}
           <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
-          
-          {/* Option 2: Bande jaune solide */}
-          {/* <div className="absolute bottom-0 left-0 right-0 h-32 bg-yellow-500/40"></div> */}
-          
-          {/* Option 3: Dégradé avec effet de fondu */}
-          {/* <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-yellow-500/50 via-yellow-500/20 to-transparent backdrop-blur-sm"></div> */}
-          
-          {/* Option 4: Dégradé latéral */}
-          {/* <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-tr from-yellow-500/30 via-yellow-400/15 to-transparent"></div> */}
         </div>
 
         {/* Overlay sombre global pour contraste */}
