@@ -46,10 +46,10 @@ function Intro() {
       onMouseMove={handleMouseMove}
       className="h-screen w-full md:pb-[200px] md:px-[200px] flex flex-col gap-[16px] items-center justify-center relative"
     >
-      <ReusableText>You've made it so far — maybe it's not by chance.</ReusableText>
+      <ReusableText>Vous avez fait autant de chemin — peut-être que ce n'est pas par hasard.</ReusableText>
       <TextAnimation>
         <p className="z-20 text-center text-[24px] md:text-[32px] neue-medium">
-          If your idea lives in the shadow, we're to shape it into something clear, powerful, and timeless. Let's begin a conversation that turns silence into lights.
+          Si votre idée vit dans l'ombre, nous sommes là pour la transformer en quelque chose de clair, puissant et intemporel. Commencent une conversation qui transforme le silence en lumières.
         </p>
       </TextAnimation>
 

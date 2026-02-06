@@ -4,17 +4,6 @@ function Hero() {
   return (
     <div className="-mx-[10px] md:-mx-[20px] my-[8px]">
       <div className="relative min-h-[97vh] text-white rounded-md w-full flex items-end pb-[32px] px-[20px] overflow-hidden">
-        {/* Spline background */}
-        <div className="absolute inset-0 overflow-hidden rounded-md">
-          {typeof window !== "undefined" && (
-            <SplineScene
-              sceneUrl="https://prod.spline.design/ahCnIfrL54W3Supk/scene.splinecode"
-            />
-          )}
-          
-          {/* Overlay jaune en bas */}
-          <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black via-black/70 to-transparent"></div>
-        </div>
 
         {/* Overlay sombre global pour contraste */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>

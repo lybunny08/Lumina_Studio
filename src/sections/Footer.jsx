@@ -20,16 +20,16 @@ function Footer() {
         {/* <p className="md:hidden text-center uppercase text-[85px] leading-[85px] neue-bold ">lumina Studio</p> */}
         <div className="flex flex-row justify-between leading-[14px] text-[14px] ">
           <TextAnimation>
-            <p>Home</p>
+            <p>Acceuil</p>
           </TextAnimation>
           <TextAnimation>
-            <p>About</p>
+            <p>Apropos</p>
           </TextAnimation>
           <TextAnimation>
             <p>Services</p>
           </TextAnimation>
           <TextAnimation>
-            <p>Works</p>
+            <p>Projets</p>
           </TextAnimation>
           <TextAnimation>
             <p>Contact</p>
@@ -76,7 +76,7 @@ function Footer() {
           <div className="h-[0.5px] w-full bg-black"></div>
           <div className="flex flex-row justify-between">
             <p>Lumina Studio 2025</p>
-            <p>Site by Mamitiana Lydien</p>
+            <p>Site par Mamitiana Lydien</p>
           </div>
         </div>
       </div>

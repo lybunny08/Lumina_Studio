@@ -89,7 +89,7 @@ function ServiceItem({ number, title, description, tags = [], image }) {
           <h2 className="text-[24px] leading-[24px] md:text-[32px] md:leading-[40px] neue-medium w-[500px] ">{title}</h2>
           <div className="flex flex-row gap-[40px] ">
             <div className="flex flex-col gap-[16px]">
-              <p>{description}</p>
+              <p className=" ">{description}</p>
               <div className="flex flex-wrap gap-[8px] ">
                 {tags.map((tag, i) => (
                   <div key={i} className="py-1 px-2 rounded-md bg-gray-500 text-white text-[14px]">

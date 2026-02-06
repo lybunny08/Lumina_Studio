@@ -94,7 +94,7 @@ function Projects() {
       >
         <div className="flex flex-col gap-[26px]">
           <div className="flex flex-row items-end justify-between px-4">
-            <ReusableText>Featured works</ReusableText>
+            <ReusableText>Projets accompli</ReusableText>
             <span className="text-[42px] leading-[42px] md:text-[140px] md:leading-[140px] uppercase neue-medium">
               '06
             </span>

@@ -85,8 +85,7 @@ function About() {
         <div className="col-span-9 flex flex-col gap-[32px] md:gap-[66px]">
           <TextAnimation disableOnMobile={true}>
 						<h2 className="text-[24px] leading-[32px] md:text-[32px] md:leading-[40px] neue-medium">
-							We help creative agencies stand out online. We listen to their vision,
-							and build exactly what they imagine — with care, precision, and meaning.
+							Nous aidons les agences créatives à se démarquer en ligne. Nous écoutons leur vision, et construisons exactement ce qu'elles imaginent — avec soin, précision et signification.
 						</h2>
 					</TextAnimation>
           {/* Grille interne pour positionner le bloc à droite */}
@@ -96,19 +95,18 @@ function About() {
 								{/* Colonne gauche */}
 								<div className="flex flex-col gap-[32px] flex-2">
 									<p className="text-[16px]">
-										We provide brands & websites with high objectives the strategy and the creativity it 
-										takes to have that impact, by teaming up with some of the best talents out there.
+										Nous fournissons aux marques et aux sites web ayant de grands objectifs la stratégie et la créativité nécessaires pour avoir cet impact, en collaborant avec certains des meilleurs talents disponibles.
 									</p>
 									<div className="flex flex-col gap-[16px] text-[16px]">
 										<div className="h-px w-full bg-white"></div>
 										<div className="flex gap-[8px]">
 											<span>01.</span>
-											<span>Creative Studio</span>
+											<span>Studio Creatif</span>
 										</div>
 										<div className="h-px w-full bg-black"></div>
 										<div className="flex gap-[8px]">
 											<span>02.</span>
-											<span>From (Antananarivo, Madagascar)</span>
+											<span>De (Antananarivo, Madagascar)</span>
 										</div>
 										<div className="h-px w-full bg-black"></div>
 									</div>

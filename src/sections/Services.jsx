@@ -8,21 +8,21 @@ function Services() {
       number: "01",
       title: "Branding",
       description:
-        "We shape identities that speak in silence. We give form to what you but can't you see.",
+        "Nous donnons forme à ce que vous savez mais que vous ne pouvez pas voir.",
       tags: ["Logo Design", "Visual Identity", "Strategy", "Art Direction"],
     },
     {
       number: "02",
       title: "Web & Mobile Development",
       description:
-        "We design and build high-performing websites and apps with precision and intent.",
+        "Nous créons des sites web et des applications performants avec soin.",
       tags: ["React", "Next.js", "Node.js", "Tailwind", "UI/UX"],
     },
     {
       number: "03",
-      title: "Strategy",
+      title: "Strategie",
       description:
-        "We guide projects with a deep focus on coherence, narrative, and emotional impact.",
+        "Priorité à des projets cohérents, bien racontés et émotifs.",
       tags: ["Concept", "Design System", "Photography", "Motion"],
     },
   ];
@@ -39,7 +39,7 @@ function Services() {
         <div className="md:col-span-9 ">
           <TextAnimation disableOnMobile={true}>
             <h2 className="text-[24px] leading-[32px] md:text-[32px] md:leading-[40px] neue-medium">
-              Shaped by every brief, built for clarity and impact. We merge design, development, and brand thinking to align vision with execution — with silence, precision, and intent.
+              Façonné par chaque brief, construit pour la clarté et l'impact. Nous fusionnons le design, le développement et la réflexion de marque pour aligner la vision avec l'exécution — avec silence, précision et intention.
             </h2>
           </TextAnimation>
         </div>
